@@ -12,6 +12,7 @@ html,
 body {
   width: 100%;
   height: 100%;
+  user-select: none;
 }
 #cursor {
   width: 1.3vw;
@@ -62,6 +63,10 @@ body {
   font-size: 1vw;
   text-transform: uppercase;
   font-weight: 500;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+#nav a:hover {
+  color: #96c11e;
 }
 
 .videoDiv {
@@ -78,6 +83,7 @@ body {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
 }
 
+/* Page1 */
 #page1 {
   height: 100vh;
   width: 100%;
@@ -128,17 +134,25 @@ body {
   height: 9vw;
   border-radius: 50%;
   border: 2px solid #96c11e;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
+.circle:hover {
+  scale: 0.7;
+  background-color: #96c11e;
 }
 
 .circle svg {
-  height: 40px;
+  height: 35px;
   fill: #fff;
 }
 
+/* Page2 */
 #page2 {
   width: 100%;
   min-height: 100vh;
   z-index: 10;
+  padding: 5vh 0;
 }
 
 #scroller {
@@ -258,7 +272,7 @@ body {
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
 }
 
-.overlay:hover {
+.card:hover .overlay {
   opacity: 1;
 }
 
@@ -275,4 +289,241 @@ body {
   font-size: 1vw;
   color: #000;
   margin-bottom: 3vh;
+}
+
+#dot-div {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right top, #96c11e, #29a534);
+  padding: 2vh 1vw;
+}
+
+#dot-div h4 {
+  text-transform: uppercase;
+  color: #000;
+  font-size: 2vw;
+  width: 60%;
+  text-align: center;
+  font-weight: 900;
+}
+
+#dot-div img {
+  height: 100%;
+  object-fit: cover;
+  width: 10%;
+}
+
+#dot1 {
+  rotate: 180deg;
+}
+
+/* Page3 */
+#page3 {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000;
+  position: relative;
+  /* z-index: 10; */
+}
+
+.food {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8vw;
+}
+
+.img-div {
+  height: 100%;
+  width: 45%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.img-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.food-text {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 5vh;
+  margin-top: 15vh;
+}
+
+.food-text h3 {
+  font-size: 3vw;
+  font-weight: 900;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.food-text p {
+  font-size: 1.3vw;
+  line-height: 5vh;
+  text-align: justify;
+}
+
+.food-text button {
+  font-size: 1.1vw;
+  font-weight: 600;
+  padding: 0.8vw 2vw;
+  background-color: #000;
+  outline: none;
+  border: 3px solid #96c11e;
+  border-radius: 50px;
+  text-transform: uppercase;
+}
+
+.page3-text {
+  padding: 5vh 0;
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 5vh;
+}
+
+.page3-text > p {
+  font-size: 1.8vw;
+  font-weight: 900;
+  line-height: 7vh;
+  width: 50%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.page3-text img {
+  height: 4vw;
+  position: absolute;
+}
+#col1 {
+  top: 12%;
+  left: 15%;
+}
+#col2 {
+  bottom: 12%;
+  right: 15%;
+}
+
+#page4 {
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vh 8vw;
+  position: relative;
+}
+
+.elem {
+  overflow: hidden;
+  width: 30%;
+  height: 70%;
+  border-radius: 30px;
+  position: relative;
+  z-index: 10;
+}
+
+.elem h2 {
+  height: 100%;
+  width: 100%;
+  background-color: #96c11e;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  font-size: 2vw;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-weight: 900;
+  z-index: 10;
+}
+
+.elem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all ease-in-out 0.8s;
+  scale: 1.1;
+}
+
+.elem:hover h2 {
+  color: #fff;
+  background-color: transparent;
+  transition: all ease-in-out 0.8s;
+}
+
+.elem:hover img {
+  scale: 1;
+}
+
+#page4 h1 {
+  font-size: 5vw;
+  position: absolute;
+  top: -5%;
+  -webkit-text-stroke: 1px #fff;
+  color: #000;
+  font-weight: 900;
+}
+
+footer {
+  width: 100%;
+  height: 40vh;
+  background: linear-gradient(to left bottom, #29a534, #96c11e);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 8vh 8vw;
+  position: relative;
+  z-index: 10;
+}
+footer img {
+  height: 6vw;
+}
+footer .link li {
+  list-style: none;
+}
+
+footer li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.8vw;
+  line-height: 8vh;
+  font-weight: 900;
+  color: #000;
+  transition: all ease-in-out 0.5s;
+}
+footer li a:hover {
+  color: #fff;
+}
+
+.direction p {
+  font-size: 1.2vw;
+  text-transform: uppercase;
+  line-height: 5vh;
+  color: #000;
+  font-weight: 600;
+}
+
+.direction p span {
+  font-weight: 800;
+  color: #000;
+  transition: all ease-in-out 0.5s;
+  cursor: pointer;
+}
+.direction p span:hover {
+  color: #fff;
 }
